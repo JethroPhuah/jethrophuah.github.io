@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jethro · Software Engineer</title>
+<meta name="description" content="Jethro is a Senior Software Engineer in Singapore building production AI systems, agentic workflows and full-stack applications.">
+<meta property="og:title" content="Jethro · Software Engineer">
+<meta property="og:description" content="Production AI systems, agentic workflows and full-stack apps.">
+<meta property="og:image" content="assets/projects/cti-agent-project-1.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23141a21'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='%23f0a35e' text-anchor='middle'%3EJP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>var t="dark";try{t=localStorage.getItem("theme")||"dark"}catch(e){}document.documentElement.dataset.theme=t;</script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">jethro<span>.</span>phuah</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+    </nav>
+    <button class="theme-btn" type="button" aria-label="Toggle light or dark theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Senior Software Engineer · Singapore</p>
+        <h1>Jethro builds AI agents that <em>ship</em>.</h1>
+        <p class="lede">I lead development of <strong>AI-powered cyber threat intelligence platforms</strong> at DSTA, and build agentic, full-stack products end to end, from the user problem to the infrastructure.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">See projects
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn ghost" href="assets/Jethro_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+          <a class="btn ghost" href="https://github.com/JethroPhuah" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/jethrophuah/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+      <figure class="trace" aria-label="Illustration: an example agent run producing a threat intelligence brief" style="margin:0">
+        <div class="trace-head">
+          <span>run · cti-brief</span><span>langgraph</span>
+          <span class="tlp">TLP:AMBER</span>
+        </div>
+        <div class="trace-body">
+          <ol>
+            <li><span class="k">user</span><span class="v">"What is <b>APT41</b> using this quarter?"</span><span class="s"></span></li>
+            <li><span class="k">plan</span><span class="v">intent=actor_profile · 3 sub-tasks</span><span class="s">ok</span></li>
+            <li class="indent"><span class="k">tool</span><span class="v">web_search(<b>"APT41 2026"</b>)</span><span class="s">1.2s</span></li>
+            <li class="indent"><span class="k">tool</span><span class="v">es.query(iocs, actor=<b>APT41</b>)</span><span class="s">0.3s</span></li>
+            <li class="indent"><span class="k">rag</span><span class="v">vector_db.search(top_k=<b>8</b>)</span><span class="s">0.4s</span></li>
+            <li class="indent"><span class="k">graph</span><span class="v">mitre.techniques(<b>G0096</b>)</span><span class="s">0.2s</span></li>
+            <li><span class="k">write</span><span class="v">report · 14 cited sources</span><span class="s">ok</span></li>
+            <li><span class="k">verify</span><span class="v">grounding check · 0 unsupported claims</span><span class="s">ok</span></li>
+            <li><span class="k">hitl</span><span class="v">waiting for analyst sign-off</span><span class="s wait">●</span></li>
+          </ol>
+        </div>
+        <figcaption class="trace-foot"><span>plan → retrieve → write → verify → review</span><span>illustrative run</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="block" id="about">
+    <div class="wrap">
+      <div class="sec-head"><span class="tag">About</span><h2>From prototype to products analysts use every day.</h2></div>
+      <div class="sec-body">
+        <div class="gutter"></div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I’m a Senior Software Engineer focused on building production AI systems, agentic workflows and full-stack applications.</p>
+            <p>At DSTA, I lead the development of AI-powered cyber threat intelligence platforms that analysts use to automate research, enrichment, reporting and decision-making. I work across the whole lifecycle: understanding the user’s problem, designing the architecture, and building the APIs, frontends, agents, retrieval pipelines and production infrastructure.</p>
+            <p>I’ve built multi-agent systems that combine web search, internal databases, retrieval, tool calling, memory, human-in-the-loop review and evaluation, on top of distributed services, Elasticsearch, vector databases, Docker and cloud infrastructure.</p>
+            <p>I like ambiguous problems and turning prototypes into reliable products people actually use.</p>
+            <div>
+              <div class="sub-h" style="margin-top:8px">Looking for</div>
+              <div class="interests">
+                <span class="chip hot">Software Engineering</span>
+                <span class="chip hot">Applied AI</span>
+                <span class="chip hot">Agentic AI</span>
+                <span class="chip hot">Forward Deployed Engineering</span>
+              </div>
+            </div>
+          </div>
+          <aside class="about-side">
+            <div class="portrait"><img src="assets/img/portrait.webp" alt="Portrait of Jethro" width="640" height="800" loading="lazy"></div>
+            <dl class="facts">
+              <div><dt>based in</dt><dd>Singapore</dd></div>
+              <div><dt>now</dt><dd>Senior SWE, DSTA</dd></div>
+              <div><dt>experience</dt><dd>3+ years</dd></div>
+              <div><dt>focus</dt><dd>Agents · RAG · Full-stack</dd></div>
+              <div><dt>degree</dt><dd>NTU, Business &amp; CS</dd></div>
+              <div><dt>open to</dt><dd>Relocating to Japan</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section class="block" id="resume">
+    <div class="wrap">
+      <div class="sec-head"><span class="tag">Resume</span><div class="sec-title-row"><h2>Experience</h2><a class="btn ghost" href="assets/Jethro_Resume.pdf" target="_blank" rel="noopener">Download PDF</a></div></div>
+      <div class="sec-body">
+        <div class="gutter"></div>
+        <div>
+          <div class="timeline">
+            <article class="role">
+              <div class="when">Jul 2023 — Present<br><span class="now">● current</span></div>
+              <div>
+                <h3>Senior Software Engineer · Lead Engineer, CTI Platform</h3>
+                <p class="org">DSTA · Defence Science and Technology Agency, Singapore</p>
+                <dl class="impact">
+                  <div><dt>~40%</dt><dd>fewer hallucinations after building the eval framework</dd></div>
+                  <div><dt>2h → 5m</dt><dd>analyst alert workflow, end to end</dd></div>
+                  <div><dt>400K+</dt><dd>records searchable through hybrid RAG</dd></div>
+                  <div><dt>10+</dt><dd>Docker services run on AWS</dd></div>
+                </dl>
+                <ul>
+                  <li>Architected and shipped a production multi-agent CTI Research Agent with LangChain, LangGraph and Deep Agents, designing agent state, task routing, context management, tool selection and multi-step execution.</li>
+                  <li>Evolved the architecture from fixed workflows into reusable skills and dynamically composed agents, so tools are picked per task as use cases grew across threat research and detection engineering.</li>
+                  <li>Built MCP servers, custom agent tools and reusable Skills.md capabilities connecting agents to enterprise APIs, internal databases, RAG search, enrichment services and platform actions.</li>
+                  <li>Set up a 50-question evaluation framework for accuracy, safety and latency, with retrieval validation, prompt-injection tests, output guardrails and an independent validator agent. Iterating on production queries and analyst feedback cut hallucinations by ~40%.</li>
+                  <li>Engineered RAG over 400K+ records and 15GB+ of enterprise knowledge, combining dense retrieval, Elasticsearch/BM25, reranking, metadata filtering and contextual chunk expansion for both semantic research and exact identifiers.</li>
+                  <li>Implemented persistent agent workflows with PostgreSQL-backed sessions, history and research outputs, so analysts can continue research across many interactions.</li>
+                  <li>Work directly with analysts to turn ambiguous research workflows into products, prototyping with users and choosing between agentic AI, deterministic automation and human review.</li>
+                  <li>Automated an analyst workflow with LLM-powered alert generation, IOC extraction and enrichment across ~7 external sources, cutting processing time from ~2 hours to ~5 minutes.</li>
+                  <li>Deploy and operate 10+ Docker services on AWS, owning CI/CD, testing, logging, monitoring, API gateway configuration and production troubleshooting.</li>
+                </ul>
+                <div class="chips">
+                  <span class="chip">LangGraph</span><span class="chip">Deep Agents</span><span class="chip">MCP</span><span class="chip">RAG</span><span class="chip">Elasticsearch</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">AWS</span><span class="chip">Docker</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p class="sub-h">Education</p>
+          <div class="timeline">
+            <article class="role">
+              <div class="when">Aug 2019 — May 2023</div>
+              <div>
+                <h3>Double Degree in Business and Computer Science</h3>
+                <p class="org">Nanyang Technological University, Singapore</p>
+                <ul>
+                  <li>Specialisation in Business Analytics and Machine Learning.</li>
+                  <li>Computer Science: First Class Honours, GPA 4.63 / 5.00.</li>
+                  <li>Business: Second Class Honours (Upper Division), GPA 4.49 / 5.00.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="block" id="projects">
+    <div class="wrap">
+      <div class="sec-head"><span class="tag">Projects</span><h2>Things I’ve built outside work</h2></div>
+      <div class="sec-body">
+        <div class="gutter"></div>
+        <div>
+          <div class="projects">
+
+            <article class="proj" data-cat="agents cti">
+              <div class="shots" data-pager>
+                <img src="assets/projects/cti-agent-project-1.webp" alt="CTI Agent answering 'What tools does APT41 use?' with a cited threat-actor profile" width="1440" height="900" loading="lazy">
+                <img src="assets/projects/cti-agent-project-2.webp" alt="Agent timeline showing retrieval evidence cards and the validator's verdict" width="1440" height="900" loading="lazy">
+                <img src="assets/projects/cti-agent-project-3.webp" alt="IOC lookup report with verdicts from four enrichment sources" width="1440" height="900" loading="lazy">
+              </div>
+              <div class="proj-body">
+                <div class="proj-meta"><span class="cat">Multi-agent · Threat intel</span><span>2026</span></div>
+                <h3>CTI Agent</h3>
+                <p class="pitch">A multi-agent threat intelligence analyst you can chat with. It plans, gathers evidence, writes a report and checks it, with every step on screen.</p>
+                <ul>
+                  <li>Four LangGraph agents: orchestrator, retrieval, writer and a validator that sends ungrounded drafts back for a rewrite.</li>
+                  <li>Evidence from Milvus vectors, Elasticsearch BM25, a Neo4j MITRE ATT&amp;CK graph and a Postgres IOC store, all exposed as MCP tools.</li>
+                  <li>IOC enrichment from VirusTotal, AbuseIPDB and Recorded Future. Analyst feedback is stored as training data.</li>
+                  <li>Runs on local Qwen3 served by vLLM. A public, synthetic-data version of a production stack.</li>
+                </ul>
+                <div class="chips"><span class="chip">LangGraph</span><span class="chip">MCP</span><span class="chip">vLLM</span><span class="chip">Milvus</span><span class="chip">Neo4j</span><span class="chip">FastAPI</span><span class="chip">Next.js</span></div>
+                <div class="links"><a class="btn ghost" href="https://github.com/JethroPhuah/CTI-Agent-Project" target="_blank" rel="noopener">View code</a></div>
+              </div>
+            </article>
+
+            <article class="proj" data-cat="agents cti">
+              <div class="shots" data-pager>
+                <img src="assets/projects/ctibaker-1.webp" alt="CTIBaker finishing a learn run with the step timeline, the planner's reasoning and a live log" width="1440" height="900" loading="lazy">
+                <img src="assets/projects/ctibaker-2.webp" alt="CTIBaker site view showing a saved recipe ready to replay without AI" width="1440" height="900" loading="lazy">
+              </div>
+              <div class="proj-body">
+                <div class="proj-meta"><span class="cat">Browser agent · Threat intel</span><span>2026</span></div>
+                <h3>CTIBaker</h3>
+                <p class="pitch">Learn a website once with an LLM, then replay it forever with no AI.</p>
+                <ul>
+                  <li>An LLM drives Chrome one typed step at a time (login, click, paginate, extract) and each working step is saved to a JSON “recipe”.</li>
+                  <li>Later runs replay the recipe deterministically. When a site changes, <code>--heal</code> repairs only the broken step.</li>
+                  <li>Credentials never reach the model, and a confirm gate stops before any irreversible action.</li>
+                  <li>Live web UI with a step timeline, the planner’s reasoning and browser thumbnails, streamed over SSE.</li>
+                </ul>
+                <div class="chips"><span class="chip">Python</span><span class="chip">Claude API</span><span class="chip">Qwen / Ollama</span><span class="chip">Pydantic</span><span class="chip">FastAPI</span><span class="chip">React 19</span></div>
+              </div>
+            </article>
+
+            <article class="proj" data-cat="agents">
+              <div class="shots" data-pager>
+                <img src="assets/projects/jarvis-1.webp" alt="JARVIS interface with a force-directed graph of 437 notes" width="1440" height="900" loading="lazy">
+                <img src="assets/projects/jarvis-2.webp" alt="JARVIS 'Plan my day' card next to a focused note" width="1440" height="900" loading="lazy">
+                <img src="assets/projects/jarvis-3.webp" alt="JARVIS 'Brief me' card with calendar, unread mail and slipped items" width="1440" height="900" loading="lazy">
+              </div>
+              <div class="proj-body">
+                <div class="proj-meta"><span class="cat">Voice agent</span><span>2026</span></div>
+                <h3>JARVIS</h3>
+                <p class="pitch">A voice-controlled assistant over my own notes, inbox and calendar, drawn as a live knowledge graph.</p>
+                <ul>
+                  <li>Turns a folder of Markdown and PDF notes into a searchable graph where wikilinks become edges.</li>
+                  <li>Agentic tool loop with seven tools (search, research, inbox, brief, remember, plan day, switch brain), each returning a spoken line and an on-screen card.</li>
+                  <li>Hands-free turn-taking with barge-in. Flags prompt injection found in emails and files as data, not commands.</li>
+                  <li>Read-only by design. Falls back to BM25 routing when no model is available.</li>
+                </ul>
+                <div class="chips"><span class="chip">Python</span><span class="chip">Claude tool use</span><span class="chip">ElevenLabs</span><span class="chip">Canvas</span><span class="chip">BM25</span></div>
+              </div>
+            </article>
+
+            <article class="proj" data-cat="agents web">
+              <div class="shots" data-pager>
+                <img src="assets/projects/dream-job-2.webp" alt="Dream Job match result scoring 78/100 with a requirements table and résumé evidence" width="1440" height="900" loading="lazy">
+                <img src="assets/projects/dream-job-3.webp" alt="Generated application draft with every claim traced to the résumé" width="1440" height="900" loading="lazy">
+                <img src="assets/projects/dream-job-1.webp" alt="Résumé upload and job search form" width="1440" height="900" loading="lazy">
+              </div>
+              <div class="proj-body">
+                <div class="proj-meta"><span class="cat">LLM pipeline · Web app</span><span>2026</span></div>
+                <h3>Dream Job</h3>
+                <p class="pitch">Scores real job postings against your résumé, with every point traceable, and drafts applications that can’t invent experience.</p>
+                <ul>
+                  <li>The LLM never outputs a score. It judges each requirement and quotes the résumé; code computes a weighted, auditable score.</li>
+                  <li>A fabrication guard rejects any claim that isn’t a verbatim résumé span, including inflated numbers.</li>
+                  <li>Two LangGraph.js graphs stream live progress. Delta polling cut each run’s transfer from 1.1 MB to 39 KB.</li>
+                  <li>Exports a tailored résumé and cover letter as .docx or .pdf.</li>
+                </ul>
+                <div class="chips"><span class="chip">TypeScript</span><span class="chip">LangGraph.js</span><span class="chip">Zod</span><span class="chip">Express</span><span class="chip">Adzuna API</span></div>
+              </div>
+            </article>
+
+            <article class="proj" data-cat="web">
+              <div class="shots phone">
+                <img src="assets/projects/tabsplit-2.webp" alt="Tabsplit expense list on a phone" width="780" height="1688" loading="lazy">
+                <img src="assets/projects/tabsplit-3.webp" alt="Tabsplit balances and the simplest way to settle up" width="780" height="1688" loading="lazy">
+              </div>
+              <div class="proj-body">
+                <div class="proj-meta"><span class="cat">Web app · Edge</span><span>2026</span></div>
+                <h3>Tabsplit</h3>
+                <p class="pitch">Splitwise for one trip: no accounts, no build step, running on Cloudflare’s edge.</p>
+                <ul>
+                  <li>Leftover cents are distributed so shares always add up exactly to what was paid.</li>
+                  <li>Settle-up pairs the largest debtor with the largest creditor, so it never takes more than n−1 payments.</li>
+                  <li>Ownership enforced on the server; CI runs the money tests before every deploy.</li>
+                </ul>
+                <div class="chips"><span class="chip">Cloudflare Workers</span><span class="chip">D1 / SQLite</span><span class="chip">Vanilla JS</span><span class="chip">GitHub Actions</span></div>
+                <div class="links">
+                  <a class="btn" href="https://tabsplit.tabsplit.workers.dev" target="_blank" rel="noopener">Live app</a>
+                  <a class="btn ghost" href="https://github.com/JethroPhuah/tabsplit" target="_blank" rel="noopener">View code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="proj" data-cat="web">
+              <div class="shots phone">
+                <img src="assets/projects/busstop-app-2.webp" alt="Go JB? verdict cards for both directions on a phone" width="780" height="1688" loading="lazy">
+              </div>
+              <div class="proj-body">
+                <div class="proj-meta"><span class="cat">Computer vision · Open data</span><span>2026</span></div>
+                <h3>Go JB?</h3>
+                <p class="pitch">One page that tells you whether to drive to Johor now, and through which checkpoint.</p>
+                <ul>
+                  <li>Reads six LTA traffic cameras plus NEA rainfall and forecasts for the Woodlands and Tuas crossings.</li>
+                  <li>Scores congestion per direction against each camera’s own history at the same time of week, because a fixed threshold mistook lamp posts for traffic.</li>
+                  <li>Says “learning” until it has enough history, and refuses to judge frames that are too dark.</li>
+                  <li>A scheduled GitHub Action publishes a static snapshot to GitHub Pages.</li>
+                </ul>
+                <div class="chips"><span class="chip">Python</span><span class="chip">Pillow</span><span class="chip">NumPy</span><span class="chip">data.gov.sg</span><span class="chip">GitHub Actions</span></div>
+                <div class="links">
+                  <a class="btn" href="https://jethrophuah.github.io/busstop-app/" target="_blank" rel="noopener">Live snapshot</a>
+                  <a class="btn ghost" href="https://github.com/JethroPhuah/busstop-app" target="_blank" rel="noopener">View code</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <p class="sub-h">Earlier work</p>
+          <div class="minor">
+            <a href="https://github.com/JethroPhuah/Stable-Diffusion-with-FastAPI" target="_blank" rel="noopener"><strong>Stable Diffusion API</strong><span>Containerised SD 3.5 text-to-image service · FastAPI, PyTorch, Docker GPU</span></a>
+            <a href="https://github.com/JethroPhuah/Twitter-BERT-Sentiment-Analysis" target="_blank" rel="noopener"><strong>Twitter BERT Sentiment</strong><span>Fine-tuned BERT on SMILE emotion data · F1 0.887</span></a>
+            <a href="https://github.com/JethroPhuah/Fruits-Image-Classification" target="_blank" rel="noopener"><strong>Fruits-360 Classifier</strong><span>CNN over 131 classes and ~90k images · PyTorch</span></a>
+            <a href="https://github.com/JethroPhuah/Predicting-Criminal-Recividism" target="_blank" rel="noopener"><strong>Predicting Recidivism</strong><span>Neural net vs random forest vs CART on 720k records</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="block" id="skills">
+    <div class="wrap">
+      <div class="sec-head"><span class="tag">Skills</span><h2>Toolbox</h2></div>
+      <div class="sec-body">
+        <div class="gutter"></div>
+        <div class="skills">
+          <div class="skill-group">
+            <h3>Agent engineering</h3>
+            <p>Multi-agent systems, tools, skills and evaluation</p>
+            <div class="chips"><span class="chip">LangGraph</span><span class="chip">LangChain</span><span class="chip">Deep Agents</span><span class="chip">MCP</span><span class="chip">Agent Skills</span><span class="chip">Multi-agent systems</span><span class="chip">Context engineering</span><span class="chip">LLM evaluation</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>AI &amp; retrieval</h3>
+            <p>Grounded answers over private data, on open-source models</p>
+            <div class="chips"><span class="chip">RAG</span><span class="chip">vLLM</span><span class="chip">Qwen</span><span class="chip">BGE</span><span class="chip">spaCy</span><span class="chip">Milvus</span><span class="chip">Elasticsearch / BM25</span><span class="chip">Neo4j</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>Software &amp; data</h3>
+            <p>APIs, frontends and the data behind them</p>
+            <div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">GraphQL</span><span class="chip">REST APIs</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">RabbitMQ</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>Cloud &amp; DevOps</h3>
+            <p>Shipping and running services in production</p>
+            <div class="chips"><span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">CI/CD</span><span class="chip">Kong API Gateway</span><span class="chip">Git / GitHub</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>AI-assisted development</h3>
+            <p>How I build day to day</p>
+            <div class="chips"><span class="chip">Claude Code</span><span class="chip">Codex</span><span class="chip">GitHub Copilot</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>Threat intelligence</h3>
+            <p>The domain I build for</p>
+            <div class="chips"><span class="chip">MITRE ATT&amp;CK</span><span class="chip">STIX 2.1</span><span class="chip">IOC extraction &amp; enrichment</span><span class="chip">Detection engineering</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Building something with agents? Let’s talk.</h2>
+    <div class="contact">
+      <a class="btn" href="mailto:jethrophuah@gmail.com">Email me</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/jethrophuah/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/JethroPhuah" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="copy-row"><span id="email">jethrophuah@gmail.com</span><button class="btn ghost" type="button" data-copy="jethrophuah@gmail.com" style="padding:5px 10px">Copy</button></div>
+    <div class="fine"><span>© <span id="year">2026</span> Jethro</span><span>TLP:CLEAR · share freely</span></div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
