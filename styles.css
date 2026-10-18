@@ -169,7 +169,7 @@ section.block { padding-block: clamp(56px, 8vw, 104px); border-top: 1px solid va
 .about-text p:first-child { font-size: var(--step-1); line-height: 1.5; color: var(--ink); }
 .about-text p { color: var(--ink-2); }
 .portrait { border-radius: var(--radius); overflow: hidden; background: var(--surface); }
-.portrait img { width: 100%; aspect-ratio: 4/5; object-fit: cover; filter: grayscale(0.15) contrast(1.02); }
+.portrait img { width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: center 30%; filter: grayscale(0.15) contrast(1.02); }
 .facts { margin: 16px 0 0; display: grid; gap: 0; font-size: var(--step--1); }
 .facts div { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px dashed var(--line); }
 .facts dt { font-family: var(--f-mono); color: var(--ink-2); }
