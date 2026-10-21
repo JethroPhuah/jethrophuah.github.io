@@ -179,21 +179,21 @@
 
             <article class="proj" data-cat="agents cti">
               <div class="shots" data-pager>
-                <img src="assets/projects/cti-agent-project-1.webp" alt="CTI Agent answering 'What tools does APT41 use?' with a cited threat-actor profile" width="1440" height="900" loading="lazy">
-                <img src="assets/projects/cti-agent-project-2.webp" alt="Agent timeline showing retrieval evidence cards and the validator's verdict" width="1440" height="900" loading="lazy">
-                <img src="assets/projects/cti-agent-project-3.webp" alt="IOC lookup report with verdicts from four enrichment sources" width="1440" height="900" loading="lazy">
+                <img src="assets/projects/cti-agent-project-1.webp" alt="CTI Agent console with a comparison question ready to send and the research tools listed in the run inspector" width="1440" height="900" loading="lazy">
+                <img src="assets/projects/cti-agent-project-2.webp" alt="MCP Servers page with the retrieval, search and enrichment servers connected and their tools" width="1440" height="900" loading="lazy">
+                <img src="assets/projects/cti-agent-project-3.webp" alt="Synthetic APT41 campaign report that the agent's citations link to" width="1440" height="900" loading="lazy">
               </div>
               <div class="proj-body">
-                <div class="proj-meta"><span class="cat">Multi-agent · Threat intel</span><span>2026</span></div>
+                <div class="proj-meta"><span class="cat">Deep agents · Threat intel</span><span>2026</span></div>
                 <h3>CTI Agent</h3>
-                <p class="pitch">A multi-agent threat intelligence analyst you can chat with. It plans, gathers evidence, writes a report and checks it, with every step on screen.</p>
+                <p class="pitch">A deep-agent threat intelligence analyst. A supervisor plans the research, hands independent questions to subagents and returns a report where every claim is checked against its sources.</p>
                 <ul>
-                  <li>Four LangGraph agents: orchestrator, retrieval, writer and a validator that sends ungrounded drafts back for a rewrite.</li>
-                  <li>Evidence from Milvus vectors, Elasticsearch BM25, a Neo4j MITRE ATT&amp;CK graph and a Postgres IOC store, all exposed as MCP tools.</li>
-                  <li>IOC enrichment from VirusTotal, AbuseIPDB and Recorded Future. Analyst feedback is stored as training data.</li>
-                  <li>Runs on local Qwen3 served by vLLM. A public, synthetic-data version of a production stack.</li>
+                  <li>Supervisor on LangGraph with Deep Agents middleware: Markdown skills, a scratch filesystem and isolated research subagents sharing one resource budget.</li>
+                  <li>Every tool result is captured as evidence in Postgres before the model sees it. Claims are reviewed against exact source passages, and missing evidence is reported as a gap.</li>
+                  <li>Four MCP servers: OpenCTI STIX graph and report search (Elasticsearch, Milvus), web search, IOC enrichment, and an approval-gated OpenCTI publisher.</li>
+                  <li>Ships with a seeded synthetic corpus (10 actors, 49 reports, 80 IOCs), so the whole stack starts with a single Docker Compose command. A public version of a production stack.</li>
                 </ul>
-                <div class="chips"><span class="chip">LangGraph</span><span class="chip">MCP</span><span class="chip">vLLM</span><span class="chip">Milvus</span><span class="chip">Neo4j</span><span class="chip">FastAPI</span><span class="chip">Next.js</span></div>
+                <div class="chips"><span class="chip">LangGraph</span><span class="chip">Deep Agents</span><span class="chip">MCP</span><span class="chip">PostgreSQL</span><span class="chip">Elasticsearch</span><span class="chip">Milvus</span><span class="chip">FastAPI</span><span class="chip">React</span></div>
                 <div class="links"><a class="btn ghost" href="https://github.com/JethroPhuah/CTI-Agent-Project" target="_blank" rel="noopener">View code</a></div>
               </div>
             </article>
